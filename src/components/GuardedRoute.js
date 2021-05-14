@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Redirect } from "react-router-dom";
+import React from 'react'
+import { Route, Redirect } from "react-router-dom"
 
 const GuardedRoute = ({ component: Component, auth, ...rest }) => (
     <Route {...rest} render={(props) => (
@@ -9,4 +9,4 @@ const GuardedRoute = ({ component: Component, auth, ...rest }) => (
     )} />
 )
 
-export default GuardedRoute;
+export default GuardedRoute

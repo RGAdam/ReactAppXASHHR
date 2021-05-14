@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Form} from 'react-bootstrap';
+import { Button, Col, Form } from 'react-bootstrap'
 
 class GetPlayerStats extends React.Component {
     constructor(props) {
@@ -37,20 +37,23 @@ class GetPlayerStats extends React.Component {
 
         return(
             <div>
+                <h1>Get Specific Player's Statistics</h1>
                 <Form onSubmit={ this.submitHandler }>
-                    <Form.Group controlId="formUsername">
-                        <Form.Label>Username</Form.Label>
-                        <Form.Control
-                            name="username"
-                            type="text"
-                            placeholder="Enter Username"
-                            onChange={ this.onInputChange }
-                        />
-                        <Form.Text className="text-muted">
-                            Usernames to try: RGAdam, Capstical, TommyInnit, The99thDasher, ThirtyVirus
-                        </Form.Text>
-                    </Form.Group>
-
+                    <Form.Row>
+                        <Col xs={3}>
+                            <Form.Label>Username</Form.Label>
+                            <Form.Control
+                                name="username"
+                                type="text"
+                                placeholder="Enter Username"
+                                onChange={ this.onInputChange }
+                            />
+                        </Col>
+                    </Form.Row>
+                    <Form.Text className="text-muted">
+                        Usernames to try: RGAdam, Capstical, TommyInnit, The99thDasher, ThirtyVirus
+                    </Form.Text>
+                    <p></p>
                     <Button variant="primary" type="submit">Get Stats</Button>
                 </Form>
 
@@ -64,5 +67,5 @@ class GetPlayerStats extends React.Component {
     }
 }
 
-export default GetPlayerStats;
+export default GetPlayerStats
 
